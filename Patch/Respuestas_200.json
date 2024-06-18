@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "3b53dbf4-e63a-4a43-9e12-1726e4eafd20",
+		"name": "Patch codigo 200",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29460625",
+		"_collection_link": "https://red-satellite-829132.postman.co/workspace/Federado~172c1f94-a2d8-47f0-9512-d97ca65ff9d4/collection/29460625-3b53dbf4-e63a-4a43-9e12-1726e4eafd20?source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Actualizar Llave Codigos 200",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Status code is 202\", function () {\r",
+							"    pm.response.to.have.status(202);\r",
+							"});\r",
+							"// Imprimir el comentario en la consola de Newman\r",
+							"console.log(\"Comentario del caso de prueba: \", pm.iterationData.get(\"comentario\"));"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Genera un valor aleatorio entre 0 y 1\r",
+							"let randomValue = Math.random();\r",
+							"\r",
+							"// Determina el estado basado en el valor aleatorio\r",
+							"let status = randomValue < 0.5 ? \"LOCK\" : \"ACTIVE\";\r",
+							"\r",
+							"// Guarda el estado en una variable de entorno o de colección\r",
+							"pm.environment.set(\"randomStatus\", status);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "client-id",
+						"value": "{{client-id}}"
+					},
+					{
+						"key": "client-secret",
+						"value": "{{client-secret}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"status\": {{status}},\r\n  \"account\": {\r\n    \"accountType\": \"ORDINARY_DEPOSIT\",\r\n            \"accountNumber\": {{accountNumber}},\r\n            \"signer\": {{signer}}\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://directoriofederado.crt.transfiya.com.co/ext/transfiya/fd/entities/2/keys/fac43d42-4eeb-4d2c-9cad-572de1e2f2e6",
+					"protocol": "https",
+					"host": [
+						"directoriofederado",
+						"crt",
+						"transfiya",
+						"com",
+						"co"
+					],
+					"path": [
+						"ext",
+						"transfiya",
+						"fd",
+						"entities",
+						"2",
+						"keys",
+						"fac43d42-4eeb-4d2c-9cad-572de1e2f2e6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

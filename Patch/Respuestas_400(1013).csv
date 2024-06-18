@@ -1,0 +1,7 @@
+status,accountType,accountNumber,signer,EntityId,Keyid,comentario
+"""dfsdfd""","""ORDINARY_DEPOSIT""","""53612622""","""0SGL3o8pzxq_Lqa""",2,fac43d42-4eeb-4d2c-9cad-572de1e2f2e6,Validar campo status al enviar un valor no permitido en el array
+"""ACTIVE""","""Para pruebas""","""53612622""","""0SGL3o8pzxq_Lqa""",2,fac43d42-4eeb-4d2c-9cad-572de1e2f2e6,Validar campo accountType al enviar un valor no permitido en el array
+"""ACTIVE""","""ORDINARY_DEPOSIT""","""23456789098765434567898765432456434234323""","""0SGL3o8pzxq_Lqa""",2,fac43d42-4eeb-4d2c-9cad-572de1e2f2e6,Validar campo accountNumber al superar su longitud maxima
+"""ACTIVE""","""ORDINARY_DEPOSIT""","""23""","""0SGL3o8pzxq_Lqa""",2,fac43d42-4eeb-4d2c-9cad-572de1e2f2e6,Validar campo accountNumber al no superar su longitud minima
+"""ACTIVE""","""ORDINARY_DEPOSIT""","""53612622""","""2345678909876543456789876543245643429""",2,fac43d42-4eeb-4d2c-9cad-572de1e2f2e6,Validar campo Signeral superar su longitud maxima
+"""dfsdfd""","""ORDINARY_DEPOSIT""","""53612622""","""0SGL3o8pzxq_Lqa""",2,fac43d42-4eeb-4d2c-9cad-572de1e2f2e6,Validar campos de salida presentados en el status 400

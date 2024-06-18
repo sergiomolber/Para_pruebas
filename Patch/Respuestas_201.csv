@@ -1,0 +1,6 @@
+﻿status,accountNumber,signer,comentario
+"""ACTIVE""","""{{$randomBankAccount}}""","""{{$randomBankAccount}}""",Caso de exito del proceso
+"""""","""{{$randomBankAccount}}""","""{{$randomBankAccount}}""",Validar campo status al enviarlo vacio
+null,"""{{$randomBankAccount}}""","""{{$randomBankAccount}}""",Validar campo status al enviarlo null
+"""ACTIVE""","""{{$randomBankAccount}}""","""{{$randomBankAccount}}""",Validar campos de salida presentados en el status 202
+"""ACTIVE""","""{{$randomBankAccount}}""","""{{$randomBankAccount}}""",Validar que se pueda cambiar el accountNumber
